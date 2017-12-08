@@ -1,0 +1,39 @@
+<% include ../components/header %>
+<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="text-center">My Polls</h1>
+				<hr>
+				<table class="table table-hover table-striped">
+					<colgroup>
+						<col class="col-md-9">
+						<col class="col-md-3">
+					</colgroup>
+					<thead>
+						<tr>
+							<th><b>Title</b></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<%if(!polls.length) { %>
+						<tr>
+							<td class="text-center" colspan="2">No authored polls</td>
+						</tr><%} %><%polls.forEach(poll => { %>
+						<tr>
+							<td>
+								<a class="link" href="/polls/<%= poll._id %>"><%= poll.title %></a>
+							</td>
+							<td class="text-center">
+								<a class="btn btn-xs btn-default" href="/polls/<%= poll._id %>/edit"><span aria-hidden="true" class="glyphicon glyphicon-pencil"></span></a> &nbsp;&nbsp;&nbsp;
+								<form action="/polls/<%= poll._id %>?_method=DELETE" method="post">
+									<button class="btn btn-xs btn-danger" type="submit"><span aria-hidden="true" class="glyphicon glyphicon-trash"></span></button>
+								</form>
+							</td>
+						</tr><%}); %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+</div>
+<% include ../components/footer %>
