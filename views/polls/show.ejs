@@ -1,0 +1,45 @@
+<% include ../components/header %>
+	<div class="container">
+		<div class="row">
+			<h1 class="text-center"><%= poll.title %></h1>
+			<div class="text-center">
+				<p class="text-muted">by <%= poll.author.username %> - <%= new Date(poll.createdAt).toDateString() %></p><span class="label label-default"><%= poll.totalVotes %> Votes</span>
+			</div>
+			<hr>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<%if(poll.userVoted(loggedUser)) { %>
+				<h2 class="text-center">You have voted</h2><%} else { %>
+				<h2 class="text-center">Vote</h2><%} %>
+				<hr style="max-width:400px">
+				<p>&nbsp;</p>
+				<form action="/polls/%3C%=%20poll._id%20%%3E/vote" class="app-form" method="post">
+					<div class="form-group">
+						<select class="form-control input-lg select-field" name="vote" required="">
+							<option disabled="disabled" hidden="" selected="selected" value="">
+								Choose an option...
+							</option><%poll.options.forEach(option => { %>
+							<option value="<%= option._id %>">
+								<%= option.description %>
+							</option><%});%>
+						</select>
+					</div>
+					<div class="form-group">
+						<%if(poll.userVoted(loggedUser)) { %> <button class="btn btn-lg btn-block btn-default" disabled type="button"><i aria-hidden="true" class="fa fa-check-circle"></i> You have voted</button> <%} else { %> <button class="btn btn-lg btn-block btn-default" type="submit"><i aria-hidden="true" class="fa fa-check-circle"></i> Vote</button> <%} %>
+					</div>
+				</form>
+				<div class="form-group">
+					<div class="input-group app-form">
+						<span class="input-group-addon"><i aria-hidden="true" class="fa fa-share-square-o"></i> Share</span> <input class="form-control share input-field" type="text" value="">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-md-offset-2">
+				<h2 class="text-center">Results</h2>
+				<hr style="max-width:400px">
+				<div id="chart"></div>
+			</div>
+		</div>
+	</div>
+<%- include('../components/footer', { script: 'poll-results' }) %>

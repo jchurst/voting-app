@@ -1,0 +1,29 @@
+<% include ../components/header %>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<h1 class="text-center">New Poll</h1>
+				<hr>
+				<form action="/polls" class="app-form" method="post">
+					<div class="form-group">
+						<label for="title">Title</label> <input class="form-control input-field" id="title" name="poll[title]" placeholder="Poll Title" required="" type="text">
+					</div>
+					<div class="form-group">
+						<label for="options">Options</label> <input class="form-control input-field" id="options" name="poll[options][]" placeholder="First Option" required="" type="text">
+						<div class="extra-option">
+							<input class="form-control input-field" name="poll[options][]" placeholder="Second Option" required="" type="text">
+						</div>
+						<p>&nbsp;</p>
+						<div class="text-center">
+							<button class="btn btn-sm btn-default" id="more-options" type="button"><i aria-hidden="true" class="fa fa-plus-circle"></i> Add option</button>
+						</div>
+						<p>&nbsp;</p>
+					</div>
+					<div class="form-group">
+						<button class="btn btn-lg btn-default btn-block" type="submit"><i aria-hidden="true" class="fa fa-plus-square"></i> Update</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+<%- include('../components/footer', { script: 'poll-extra-options' }) %>

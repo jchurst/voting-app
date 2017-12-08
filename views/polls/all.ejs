@@ -1,0 +1,29 @@
+<% include ../components/header %>
+	<div class="container">
+		<div class="jumbotron text-center">
+			<h2><i aria-hidden="true" class="fa fa-bar-chart"></i> FreeCodeCamp API - Voting App.</h2>
+			<p>Vote on existing polls or create new polls.</p>
+			<p><a class="btn btn-default btn-lg" href="/polls/new" role="button"><i aria-hidden="true" class="fa fa-plus-circle"></i> CREATE POLL</a></p>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="text-center">Existing Polls</h1>
+				<hr>
+				<%if(!polls.length) { %>
+				<h3 class="text-center"><i aria-hidden="true" class="fa fa-times-circle"></i> No existing polls</h3>
+        <%} %>
+        <%polls.forEach((poll, index) => { %>
+				<div class="col-sm-4">
+					<div class="well">
+						<h3 align="center"><%= poll.title %></h3>
+						<p align="center"><span class="text-muted">By <%= poll.author.username %> - <%= new Date(poll.createdAt).toDateString() %> &nbsp;&nbsp;</span> <span class="label label-default"><%= poll.totalVotes %> Votes</span></p>
+						<p align="center"><a class="btn btn-sm btn-default" href="/polls/<%= poll._id %>"><i aria-hidden="true" class="fa fa-check-circle"></i> VOTE</a></p>
+					</div>
+				</div>
+        <%if (((index + 1) % 3) === 0) { %>
+				<div class="clearfix"></div>
+        <%} %><%})%>
+			</div>
+		</div>
+	</div>
+<%include ../components/footer %>
