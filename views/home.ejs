@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>FreeCodeCamp API - Voting App.</title>
+  <!-- BOOTSTRAP -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- FONT AWESOME -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- FONT -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <!-- CSS -->
+	<link href="/css/main.css" rel="stylesheet">
+  <!-- FAVICON -->
+	<link href="https://cdn.glitch.com/d6fa88a9-eb47-4d8f-a66e-55cdbe1ba116%2Ffavicon.jpg?1512681727293" rel="shortcut icon">
+	<link href="https://cdn.glitch.com/d6fa88a9-eb47-4d8f-a66e-55cdbe1ba116%2Ffavicon.jpg?1512681727293" rel="apple-touch-icon">
+</head>
+<body>
+<%include components/navbar %>
+	<div class="container-fluid header">
+		<div class="content text-center">
+			<h2 class="heading1"><i aria-hidden="true" class="fa fa-bar-chart"></i> FreeCodeCamp API - Voting App.</h2>
+			<h3>Create and share polls - vote on existing polls</h3>
+      <p>
+        &nbsp;
+      </p>
+			<hr>
+      <p>
+        &nbsp;
+      </p>
+			<%if(!loggedUser) { %> <a class="btn btn-lg btn-default" href="/auth/register"><i aria-hidden="true" class="fa fa-user-circle"></i> Sign up</a> <%} %> <a class="btn btn-lg btn-default" href="/polls"><i aria-hidden="true" class="fa fa-bar-chart"></i> View polls</a>
+		  <p>
+        &nbsp;
+      </p>
+    </div>
+	</div>
+<% include components/footer %>
