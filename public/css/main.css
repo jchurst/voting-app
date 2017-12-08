@@ -1,0 +1,119 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+.navbar {
+	border-radius: 0;
+}
+.extra-option {
+	margin-top: 0.3em;
+}
+#more-options {
+	margin-top: 0.3em;
+}
+.heading1 {
+	padding: 50px
+}
+hr {
+	border-top: 1px solid darkred;
+}
+a.link {
+	color: darkred
+}
+a.link:hover {
+	color: black;
+	font-weight: bold
+}
+#rule {
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: darkred;
+}
+#chart {
+	max-width: 300px;
+	margin: 0 auto 0 auto
+}
+.extra-option-close {
+	z-index: 10;
+	pointer-events: auto;
+	cursor: pointer;
+}
+.extra-option-close:hover {
+	color: red;
+}
+table form {
+	display: inline;
+}
+#chart {
+	width: 100%;
+	min-height: 450px;
+}
+footer {
+	margin-top: 3em;
+}
+footer i {
+	color: #333;
+}
+footer i:hover {
+	color: #333C;
+}
+.jumbotron h1 {
+	font-weight: 700;
+}
+.app-form label {
+	display: block;
+	margin: 0px 0px 15px 0px;
+}
+.app-form label>span {
+	width: 100px;
+	font-weight: bold;
+	float: left;
+	padding-top: 8px;
+	padding-right: 5px;
+}
+.app-form span.required {
+	color: red;
+}
+.app-form .tel-number-field {
+	width: 40px;
+	text-align: center;
+}
+.app-form input.input-field, .app-form .tel-number-field, .app-form .textarea-field, .app-form select.select-field {
+	margin: 0 auto 0 auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 7px;
+	outline: none;
+}
+.app-form .radio-field {
+	margin: 0 auto 0 auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 7px;
+	outline: none;
+}
+.app-form input.input-field:focus, .app-form .tel-number-field:focus, .app-form .textarea-field:focus, .app-form select.select-field:focus, .app-form .radio-field:focus {
+	border: 1px solid darkred;
+	-webkit-box-shadow: 0px 0px 1px 1x rgba(139, 0, 0, 0.5);
+	-moz-box-shadow: 0px 0px 1px 1px rgba(139, 0, 0, 0.5);
+	box-shadow: 0px 0px 1px 1px rgba(139, 0, 0, 0.5);
+}
+.app-form .textarea-field {
+	height: 100px;
+	width: 55%;
+}
