@@ -1,0 +1,39 @@
+{
+  "name": "voting-app",
+  "version": "1.0.0",
+  "description": "FreeCodeCamp API - Voting App.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jchurst/voting-app.git"
+  },
+  "author": "JC Hurst",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jchurst/voting-app/issues"
+  },
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ],
+  "homepage": "https://github.com/jchurst/voting-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.13.6",
+    "mongoose-findorcreate": "^2.0.0",
+    "passport": "^0.4.0",
+    "passport-github": "^1.1.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.4.0",
+    "passport-twitter": "^1.0.4"
+  }
+}
